@@ -11,6 +11,7 @@ import ReactFlow, {
   Position,
 } from "reactflow";
 import "reactflow/dist/style.css";
+import "./flowBox.css";
 
 import TextUpdaterNode from "../textUpdateNode/TextUpdateNode";
 
@@ -73,16 +74,18 @@ const Flowbox: React.FC = () => {
   );
 
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
-      nodeTypes={nodeTypes}
-      fitView
-      style={rfStyle}
-    />
+    <div className="flowbox_container">
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+        nodeTypes={nodeTypes}
+        fitView
+        style={rfStyle}
+      />
+    </div>
   );
 };
 
