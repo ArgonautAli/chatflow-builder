@@ -1,16 +1,14 @@
-export interface NODE_TYPES {
-  type: "text" | "model" | "";
-}
+export type NODE_TYPE = "text" | "model" | string;
 
 export interface NODE_STATE {
   value: string;
-  type: NODE_TYPES;
+  type: NODE_TYPE;
   id: string;
 }
 
-export interface CREATE_NODE {
+interface CREATE_NODE {
   value: boolean;
-  type: NODE_TYPES;
+  type: NODE_TYPE;
 }
 
 export interface FLOW_STATE {

@@ -1,7 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { flow_slice } from "./redux/nodesSlice";
+
+const rootReducer = combineReducers({
+  flow_slice: flow_slice,
+});
 
 export const store = configureStore({
-  reducer: {},
+  reducer: { rootReducer },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
